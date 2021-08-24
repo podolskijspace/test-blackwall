@@ -69,4 +69,14 @@
     height: 51.9rem;
     background: url('../../assets/img/content/header.svg') no-repeat center/cover;
   }
+
+  &__layover {
+    position: absolute;
+    top: -14.7rem;
+    right: 50%;
+    transform: translateX(-10rem);
+    width: 76.6rem;
+    height: 76.6rem;
+    background: url('../../assets/img/content/header-layover.svg') no-repeat center/cover;
+  }
 }
