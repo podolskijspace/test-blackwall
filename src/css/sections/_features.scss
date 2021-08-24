@@ -1,5 +1,10 @@
 .features {
   padding: 13rem 0 0;
+  overflow: hidden;
+
+  @include mobile {
+    padding-top: 5rem;
+  }
 
   &__title {
     margin: 0 0 1.2rem;
@@ -8,6 +13,11 @@
     text-align: center;
     text-transform: capitalize;
     color: $navyBlue;
+
+    @include mobile {
+      margin-bottom: 1.2rem;
+      font-size: 2.4rem;
+    }
   }
 
   &__subtitle {
@@ -18,47 +28,107 @@
     line-height: 3rem;
     font-weight: 400;
     color: $navyBlue;
+
+    @include mobile {
+      margin-bottom: 4rem;
+      max-width: 40.5rem;
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+
+    &-cover {
+      display: inline-block;
+
+      @include mobile {
+        display: none;
+      }
+    }
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
+
+    @include mobile {
+      justify-content: center;
+      margin: -2.4rem;
+    }
   }
 
   &__item {
+    max-width: 30%;
     &:not(:last-child) {
       margin-right: 8rem;
+
+      @include smallDesktop {
+        margin-right: 4rem;
+      }
+
+      @include mobile {
+        margin: 0;
+      }
+    }
+
+    @include mobile {
+      padding: 2.4rem;
+      max-width: none;
     }
 
     svg {
       &.price {
         width: 7.2rem;
         height: 7.2rem;
+
+        @include mobile {
+          width: 4.8rem;
+          height: 4.8rem;
+        }
       }
 
       &.reliabily {
         width: 5.6rem;
         height: 7.2rem;
+
+        @include mobile {
+          width: 3.7rem;
+          height: 4.8rem;
+        }
       }
 
       &.secure {
         width: 7.1rem;
         height: 7.2rem;
+
+        @include mobile {
+          width: 4.7rem;
+          height: 4.8rem;
+        }
       }
     }
   }
 
   &__wrapp {
-    width: 32rem;
+    max-width: 32rem;
+    width: 100%;
     min-height: 27.5rem;
     height: 100%;
     display: flex;
     flex-direction: column;
+
+    @include mobile {
+      width: 32rem;
+      min-height: 21.2rem;
+    }
   }
 
   &__img {
     height: 7.2rem;
     margin-bottom: 2.8rem;
+
+    @include mobile {
+      height: 4.8rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__header {
@@ -66,6 +136,11 @@
     font-size: 2.4rem;
     font-weight: 600;
     color: $navyBlue;
+
+    @include mobile {
+      margin-bottom: 1.2rem;
+      font-size: 2rem;
+    }
   }
 
   &__body {
@@ -75,6 +150,11 @@
     line-height: 2.6rem;
     font-weight: 400;
     color: $navyBlue;
+
+    @include mobile {
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+    }
   }
   
   &__btn {
