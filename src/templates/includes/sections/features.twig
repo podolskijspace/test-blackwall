@@ -1,0 +1,63 @@
+{% if featuresList %}
+{% else %}
+  {% set featuresList = [
+    {
+      icon: 'price',
+      header: 'Affordable Pricing',
+      body: 'A dictionary of over 200 Latin words,with
+      a handful of model sentence. structures, to generate Lorem Ipsum',
+      link: ''
+    },
+    {
+      icon: 'reliabily',
+      header: 'Seamless Reliability',
+      body: 'A dictionary of over 200 Latin words,with
+      a handful of model sentence. structures, to generate Lorem Ipsum',
+      link: ''
+    },
+    {
+      icon: 'secure',
+      header: 'Secure Collaboration',
+      body: 'A dictionary of over 200 Latin words,with
+      a handful of model sentence. structures, to generate Lorem Ipsum',
+      link: ''
+    },
+  ] %}
+{% endif %}
+
+
+<section class="features" id="features">
+  <div class="container features__container">
+    <h2 class="features__title">
+      our special features
+    </h2>
+    <span class="features__subtitle">
+      We are familiar with offline speed dating flow so we designed out online
+      platform considering all the requirements
+    </span>
+    <ul class="features__list">
+      {% for item in featuresList %}
+        <li class="features__item {{item.icon}}">
+          <div class="features__wrapp">
+            <div class="features__img">
+              {% include '../svg-temp.twig' with {
+                iconName: item.icon,
+              } %}
+            </div>
+            <span class="features__header">
+              {{item.header}}
+            </span>
+            <span class="features__body">
+              {{item.body}}
+            </span>
+            {% include '../btn.twig' with {
+              btnTheme: 'features__btn transparent',
+              text: 'Learn more',
+              href: item.link
+            } %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
