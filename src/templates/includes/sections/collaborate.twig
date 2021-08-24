@@ -88,8 +88,8 @@
               </span>
               <ul class="collaborate__elements">
                 {% for item in item.list %}
-                  <li class="collaborate__elenemt">
-                    <div class="collaborate__element-wrapper">
+                  <li class="collaborate__element">
+                    <div class="collaborate__element-wrapper {{item.icon}}">
                       {% include '../svg-temp.twig' with {
                         iconName: item.icon,
                       } %}
