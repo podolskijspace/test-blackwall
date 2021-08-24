@@ -1,0 +1,123 @@
+{% if dataList %}
+{% else %}
+  {% set dataList = [
+    {
+      count: '15k',
+      list: [
+        {
+          icon: 'heart'
+        },
+        {
+          icon: 'heart'
+        },
+        {
+          icon: 'heart'
+        },
+        {
+          icon: 'heart'
+        },
+        {
+          icon: 'heart'
+        },
+      ],
+      text: 'Active Downloads'
+    },
+    {
+      count: '4.9',
+      list: [
+        {
+          icon: 'star'
+        },
+        {
+          icon: 'star'
+        },
+        {
+          icon: 'star'
+        },
+        {
+          icon: 'star'
+        },
+        {
+          icon: 'star'
+        },
+      ],
+      text: '2,938 Rating'
+    },
+  ] %}
+{% endif %}
+
+{% if companyList %}
+{% else %}
+  {% set companyList = [
+    {
+      logo: 'airbnb',
+    },
+    {
+      logo: 'hubspot',
+    },
+    {
+      logo: 'google',
+    },
+    {
+      logo: 'microsoft',
+    },
+    {
+      logo: 'walmart',
+    },
+    {
+      logo: 'fedex',
+    },
+  ] %}
+{% endif %}
+
+
+<div class="collaborate" id="collaborate">
+  <div class="container collaborate__container">
+    <div class="collaborate__top">
+      <h2 class="collaborate__title">
+        Collaborate 2M+ startup
+        and international companies
+        ueses since 2018 
+      </h2>
+      <ul class="collaborate__list-data">
+        {% for item in dataList %}
+          <li class="collaborate__item-data">
+            <div class="collaborate__wrapper-data">
+              <span class="collaborate__count-data">
+                {{item.count}}
+              </span>
+              <ul class="collaborate__elements">
+                {% for item in item.list %}
+                  <li class="collaborate__elenemt">
+                    <div class="collaborate__element-wrapper">
+                      {% include '../svg-temp.twig' with {
+                        iconName: item.icon,
+                      } %}
+                    </div>
+                  </li>
+                {% endfor %}
+              </ul>
+              <span class="collaborate__text-data">
+                {{item.text}}
+              </span>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="collaborate__bottom">
+      <ul class="collaborate__list-company">
+        {% for item in companyList %}
+          <li class="collaborate__item-company">
+            <div class="collaborate__wrapper-company">
+              {% include '../svg-temp.twig' with {
+                iconName: item.logo,
+                svgTheme: item.logo
+              } %}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
