@@ -74,6 +74,10 @@ li {
   list-style-type: none;
 }
 
+span {
+  display: block;
+}
+
 input[placeholder] {
   text-overflow: ellipsis;
   white-space: nowrap;

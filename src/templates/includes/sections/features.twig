@@ -37,11 +37,12 @@
     </span>
     <ul class="features__list">
       {% for item in featuresList %}
-        <li class="features__item {{item.icon}}">
+        <li class="features__item">
           <div class="features__wrapp">
             <div class="features__img">
               {% include '../svg-temp.twig' with {
                 iconName: item.icon,
+                svgTheme: item.icon,
               } %}
             </div>
             <span class="features__header">
