@@ -25,6 +25,7 @@
 {% endif %}
 
 <header class="page-header" id="header">
+  <div class="page-header__bg"></div>
   <div class="page-header__top">
     <div class="page-header__logo">
       {% include '../svg-temp.twig' with {
@@ -41,7 +42,7 @@
         text: 'Sign in',
       } %}
       {% include '../btn.twig' with {
-        btnTheme: 'page-header__btn-download blue-navy',
+        btnTheme: 'page-header__btn-download navy-blue',
         text: 'Download',
       } %}
     </div>
@@ -58,6 +59,5 @@
       btnTheme: 'page-header__btn-start sky',
       text: 'Start for free',
     } %}
-    <div class="page-header__bg"></div>
   </div>
 </header>
