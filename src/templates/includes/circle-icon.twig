@@ -1,0 +1,6 @@
+<{% if noBtn %}div{% else %}button type="button"{% endif %} class="circle-icon {{circleIconMod}}{% if theme == "red" %} circle-icon--red{% endif %}{% if theme == "without-hover" %} circle-icon--without-hover{% endif %}{% if theme == "red-grey" %} circle-icon--red-grey{% endif %}{% if theme == "grey" %} circle-icon--grey{% endif %}{% if theme == "grey-red" %} circle-icon--grey-red{% endif %}{% if theme == "grey-yellow" %} circle-icon--grey-yellow{% endif %}">
+  {% include 'svg-temp.twig' with {
+    iconName: iconName|default('delete'),
+    mod: 'circle-icon__icon',
+  } %}
+</{% if noBtn %}div{% else %}button{% endif %}>
