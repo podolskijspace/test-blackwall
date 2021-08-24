@@ -14,7 +14,7 @@ body {
 
 body {
   line-height: 1.5;
-  @include source;
+  @include inter;
 
   &.overflow {
     position: fixed;
@@ -122,8 +122,9 @@ input,
 optgroup,
 select,
 textarea {
-  @include source;
+  @include inter;
   box-shadow: none;
+  
 }
 
 input {

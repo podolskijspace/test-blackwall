@@ -1,5 +1,63 @@
-<header class="page-header js-page-header" id="header">
+{% if navList %}
+{% else %}
+  {% set navList = [
+    {
+      text: 'Home',
+      link: 'home',
+    },
+    {
+      text: 'Feature',
+      link: 'feature',
+    },
+    {
+      text: 'Pricing',
+      link: 'pricing',
+    },
+    {
+      text: 'Solution',
+      link: 'solution',
+    },
+    {
+      text: 'Faq',
+      link: 'faq',
+    },
+  ] %}
+{% endif %}
+
+<header class="page-header" id="header">
+  <div class="page-header__top">
+    <div class="page-header__logo">
+      {% include '../svg-temp.twig' with {
+        iconName: 'logo',
+        svgTheme: 'page-header__logo-icon'
+      } %}
+    </div>
+    {% include '../nav.twig' with {
+      navTheme: 'page-header__nav'
+    } %}
+    <div class="page-header__buttons">
+      {% include '../btn.twig' with {
+        btnTheme: 'page-header__btn-login transparent',
+        text: 'Sign in',
+      } %}
+      {% include '../btn.twig' with {
+        btnTheme: 'page-header__btn-download blue-navy',
+        text: 'Download',
+      } %}
+    </div>
+  </div>
   <div class="container page-header__container">
-    
+    <h1 class="page-header__title">
+      The best video online
+      meeting software.
+    </h1>
+    <p class="page-header__subtitle">
+      Many desktop publishing packages and web page editors now use Lorem Ipsum as their default
+    </p>
+    {% include '../btn.twig' with {
+      btnTheme: 'page-header__btn-start sky',
+      text: 'Start for free',
+    } %}
+    <div class="page-header__bg"></div>
   </div>
 </header>

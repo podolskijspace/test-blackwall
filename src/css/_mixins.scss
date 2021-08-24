@@ -7,16 +7,8 @@
 }
 
 // fonts
-@mixin source {
-  font-family: 'Source Sans Pro';
-}
-
-@mixin yeseva {
-  font-family: 'Yeseva One';
-}
-
-@mixin helvetica {
-  font-family: 'Helvetica Neue';
+@mixin inter {
+  font-family: 'Inter', sans-serif;
 }
 
 // brakepoints

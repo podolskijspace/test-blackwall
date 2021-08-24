@@ -1,0 +1,37 @@
+{% if navList %}
+{% else %}
+  {% set navList = [
+    {
+      text: 'Home',
+      link: 'home',
+    },
+    {
+      text: 'Feature',
+      link: 'feature',
+    },
+    {
+      text: 'Pricing',
+      link: 'pricing',
+    },
+    {
+      text: 'Solution',
+      link: 'solution',
+    },
+    {
+      text: 'Faq',
+      link: 'faq',
+    },
+  ] %}
+{% endif %}
+
+<div class="nav {{navTheme}}">
+  <ul class="nav__list">
+    {% for item in navList %}
+      <li class="nav__item">
+        <a href="#{{item.link}}" class="nav__link">
+          {{item.text}}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
